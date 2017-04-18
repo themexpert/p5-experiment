@@ -2,10 +2,11 @@ var config = {
     width: window.innerWidth-20,
     height: window.innerHeight-20,
     background_color: '#607d8b',
+    circle_size: 80,
     circle_color: '#fefdff',
     planet_color: '#ffe8fe',
     inner_planet_speed: 80,
-    outer_planet_speed: 70,
+    outer_planet_speed: 60,
     bigger_particle_color: '#e4eee5',
     bigger_particle_min_size: 3,
     bigger_particle_max_size: 8,
@@ -31,7 +32,7 @@ function setup() {
 }
 
 function draw() {
-    radius = width/2;
+    radius = (width/2)*(config.circle_size/100);
     translate(width/2, height/2);
     noStroke();
     background(config.background_color);
